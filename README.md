@@ -1,5 +1,5 @@
 # TodoApp
-This is my first attempt at tackling 'Application Development'. It is a simple TodoApp that was created with HTML, CSS and Javascript.
+This is my first attempt at tackling 'Application Development'. It is a simple TodoApp that was created with HTML, CSS and Javascript. I had looked at a video by Florin Pop for reference, link - https://www.youtube.com/watch?v=dtKciwk_si4&t=19s.
 The app allows you to enter todo tasks and strike them out as you complete them (as well as delete them).
 
 First off, I apologise for the 'documentation hell' that you are about to witness when you open the files. I just added them as my way of remembering how everything works (since I'm new to HTML, CSS and Javascript) and as I create more apps and store them on GitHub, the documentation will reduce.
