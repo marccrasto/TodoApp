@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Set the Title of the document-->
+    <title>To-Do App</title>
+    <!--Set the stylesheet that will be referred to when building the page (in this case style.css)-->
+    <!--Also used another stylesheet from font-awesome to get the icon pictures that I've used for the buttons in this application -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--Set the script, 'defer' means to first parse the html page while downloading the javascript file in the background. That way the .js file could refer to the elements in the html file. The defer attribute is only for external scripts (should only be used if the src attribute is present).-->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!--A heading (multiple heading types such as h1, h2, h3...)--> 
+    <h1>To-Do List</h1>
+    <!--A div is used to dedicate a portion of the webpage to specific content that will be filled into the div. I gave it a class name so
+    I can design that portion of the webpage with specific properties. I also gave it an id so that the div can be called in javascript and
+    I can add functionality to it. Ignore the name 'form' as I initially thought my div worked like a form and then found out that there was
+    <form></form> which is different-->
+    <div class="form" id="form">
+
+        <!--An input field. There are different types: textbox, radio button, ...-->
+        <!--As usual gave it an id and a class name, placeholder is text that is written inside the textbox (used to guide the user as to what
+        to enter inside the textbox), and 'autocomplete:off' is to remove previous text submissions when the user types into the textbox-->
+        <input type="text" id="input" class="input" placeholder="Enter your todo" autocomplete="off">
+
+        <!--An unordered list (works like a div) where the 'todo' list items will be entered below. The todo list items are added dynamically
+        by the user. When the user enters into the textbox above and submits, the application will look to the javascript page and call upon
+        specific functions to handle the submission and display the todo list item-->
+        <ul class="todos" id="todos">
+        </ul>
+    
+    <!--The end of the div shows that 'input' and 'ul' are all child elements of div 'form'. This means that when we edit div in CSS, its
+    properties are passed onto its children, unless we edit specific or all properties of the child elements that will not be passed onto the
+    parent-->
+    </div>
+</body>
+</html>

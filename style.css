@@ -1,0 +1,127 @@
+/*Import using @import. Here we have imported a font.*/
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+/*Change applies to all elements unless we edit specific elements of the page with different properties*/
+* {
+    box-sizing: border-box;
+}
+
+/*Change only applies to elements in the body of the html page*/
+body {
+    /*Here we call on the font that we have imported at the start of this stylesheet*/
+    font-family: 'Comfortaa', sans-serif;
+    /*Sets the margin to 0. (In essence, if we were to insert any content, it would start at the top-right corner of the page, assuming we haven't used 
+    any aligning or justification)*/
+    margin: 0;
+    /*Below I have set the background color of the webpage. I got the color from this really good website 'https://cssgradient.io/gradient-backgrounds/'
+    which have readymade gradient color presets. Simply copy the CSS and paste*/
+    background: #bdc3c7;  
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); 
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    /*Setting the minimum height of the body of the page. Gets bigger as more content is inserted*/
+    min-height: 100vh;
+}
+
+/*Decorating the heading 'To-Do List' of the page*/
+h1 {
+    /*Centers the heading on the line of the page that it is inserted on*/
+    text-align: center;
+    /*Changes the text-color of the heading*/
+    color: white;
+    /*Changes the font-size of the heading*/
+    font-size: 8rem;
+}
+
+/*Decorating the div 'form' of the page*/
+.form {
+    /*Means to center the content of the div on the width it has (in the case 400px)*/
+    margin: auto;
+    max-width: 100%;
+    width: 400px;
+    /*Creates a nice box shadow around the div, I'm not sure what the first two fields do to the box shadow but I think the third field changes
+    how dark the shadow is and the forth field changes the width of the shadow*/
+    box-shadow: 0 0 10px 1px;
+}
+
+/*Decorate the input 'textbox' of the page*/
+.input {
+    /*Makes the textbox use up the entire space that has been allocated for it*/
+    width: 100%;
+    display: block;
+    /*As the name suggests, adds padding around the textbox*/
+    padding: 1rem 2rem;
+    /*Changes the font-size of entered text*/
+    font-size: 2rem;
+    /*Causes the font to change to whatever font is being used by its parent*/
+    font-family: inherit;
+    text-align: center;
+    /*Gets rid of the top, left and right border linings*/
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+/*Decorates the placeholder inside the textbox, in this case, center the text*/
+.input::placeholder {
+    text-align: center;
+}
+
+/*Decorates the unordered list 'todos' of the page*/
+.todos {
+    background-color: white;
+    /*Usually divs would have space between each other, setting margin 0 allows to set divs right next to each other or in this case, set the 
+    'todos' unordered list right under the textbox input*/
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*Decorates the dynamically-added list items*/
+.todos li {
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    /*Need to set display to 'flex' in order for align-items and justify content to have any effect*/
+    display: flex;
+    /*Centers horizontally*/
+    justify-content: space-between;
+    /*Centers vertically*/
+    align-items: center;
+}
+
+/*A class that is added to a list item of the unordered list 'todos' dynamically, i.e when a user finishes a todo task, they can click on the item and 
+and then the class is added to that list item. Below shows what changes will take effect when class is added to that particular list item.*/
+.todos li.completed {
+    /*A line-through is added to the task text indicating completion*/
+    text-decoration: line-through;
+    /*Text color changes to gray after user has clicked on the li*/
+    color: rgb(162, 162, 162);
+}
+
+/*Decorates the delete button that appears on the right of the list item*/
+.todos li button {
+    /*Button box usually has a square or rectangular shape. Changing the border-radius to 50% causes the button box to change to a circle*/
+    border-radius: 50%;
+    /*Gets rid of the border of the button*/
+    border: none;
+    /*This changes the size of the icon of the button*/
+    font-size: 1rem;
+    /*This changes the cursor shape to show that it is above the button*/
+    cursor: pointer;
+    /*Changes the color of the button box to the color of whatever container is holding the button*/
+    background-color: transparent;
+}
+
+/*This is a type of class that takes effect only when the cursor is above the button*/
+.todos li button:hover {
+    /*This changes the background color of the button when the cursor is hovering over the button*/
+    background-color: #d1d1d1;
+}
+
+/*Takes effect when cursor is hovering over the li*/
+.todos li:hover {
+    background-color: #b7b7b7;
+    cursor: pointer;
+    /*Used to indicate to the user what will happen to the li when you click on it. In this case, a line-through*/
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
